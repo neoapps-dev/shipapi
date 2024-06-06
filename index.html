@@ -1,1 +1,29 @@
-{"error": true, "detail": "no version or package specified"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        // Function to make a request to the Vercel serverless function to get file names
+        function fetchFiles() {
+            fetch('/api/listFiles')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch files');
+                    }
+                    return response.json();
+                })
+                .then(fileNames => {
+                    console.log(fileNames); // Output the file names to the console
+                })
+                .catch(error => {
+                    console.error('Error fetching files:', error);
+                });
+        }
+
+        // Call fetchFiles function when the page loads
+        window.onload = fetchFiles;
+    </script>
+</body>
+</html>
