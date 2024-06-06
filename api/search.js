@@ -9,10 +9,10 @@ module.exports = async (req, res) => {
         const packages = await response.json();
 
         // Search for the package
-        const packageFound = packages.find(pkg => pkg.toLowerCase().includes(query.toLowerCase()));
+        const foundPackages = packages.filter(pkg => pkg.toLowerCase().includes(query.toLowerCase()));
 
-        if (packageFound) {
-            res.status(200).json(packageFound);
+        if (foundPackages.length > 0) {
+            res.status(200).json(foundPackages);
         } else {
             res.status(404).json({ error: 'Package Not Found' });
         }
