@@ -8,6 +8,7 @@ what's inside it should look like:
 ```json
 {"name":"Package - Tagline", "author":"Your Name"}
 ```
+and then make a pull request and we will merge it after checking.
 
 ### ship
 check https://github.com/neoapps-dev/ship for the official's ship repo
