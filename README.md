@@ -1,3 +1,8 @@
+# Everything has to come to an end, sadly
+This project has been deprecated on 2024/8/21 at 4:46 PM GMT+3
+This project will no longer be maintained, search for a fork (if there is).
+- NEOAPPS.
+
 # ship's backend/api
 welcome to the official github repo of the api.
 
